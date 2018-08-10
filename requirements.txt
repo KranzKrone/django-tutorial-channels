@@ -1,2 +1,4 @@
-django
-channels
+Django==2.1
+djangorestframework==3.8.2
+Pygments==2.2.0
+pytz==2018.5

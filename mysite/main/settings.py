@@ -25,13 +25,13 @@ SECRET_KEY = 'v-%8z%(v@t$cr5)nba=g46dlbfpbd7#c-dv!iu5gifb^j+)u@r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
+INTERNAL_IPS = ['127.0.0.1', 'localhost', '::1']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'channels',    
+    'channels',
     'chat',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -70,7 +70,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'main.wsgi.application'
-
 
 
 # Database
@@ -131,5 +130,3 @@ CHANNEL_LAYERS = {
         },
     },
 }
-
-

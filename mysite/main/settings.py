@@ -101,6 +101,22 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.10/howto/static-files/
+STATIC_ROOT = BASE_DIR + '/static'
+STATIC_URL = '/static/'
+# Source directory for static files (by package all js, css, png, ico, etc)
+# before they are moved to the service area, e.g. a S3 drive in the cloud
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'assets'),
+]
+# Media files (uploads, generated, etc.)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Internationalization
+# https://docs.djangoproject.com/en/1.10/topics/i18n/
+LANGUAGE_CODE = 'en-us'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
@@ -115,11 +131,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
-
-STATIC_URL = '/static/'
 
 ASGI_APPLICATION = 'main.routing.application'
 CHANNEL_LAYERS = {
